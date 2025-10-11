@@ -1,0 +1,10 @@
+DONDE ESTOY 	| DONDE VOY 				| SOLUCIÓN
+arrel.html		|	textual.html			|	"./subir/direct/textual.html"
+docu.html			|	llista.html				|	"./llista.html"
+docu.html			|	llista.html				|	"./llista.html"
+carta.html		|	prova.html				|	"../prova/prova.html"
+carta.html		|	docu.html					|	"../subidr/docu.html"
+textual.html	|	arrel.html				|	".../arrel.html"
+textual.html	|	subidr (carpeta)	|	"../"
+textual.html	|	prova (carpeta)		|	"../../prova/"
+textual.html	|	prova.html				|	"../../prova/prova.html"

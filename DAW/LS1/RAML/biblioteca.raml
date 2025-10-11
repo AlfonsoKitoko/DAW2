@@ -1,0 +1,40 @@
+#%RAML 1.0
+title: Biblioteca Escolar API
+version: v1
+baseUri: https://api.biblioteca.edu/v1
+mediaType: application/json
+
+types:
+  Book:
+    type: object
+    properties:
+      id: integer
+      title:
+        type: string
+        required: true
+      author:
+        type: string
+        required: true
+      isbn:
+        type: string
+        required: true
+      category: string
+      status:
+        type: string
+        enum: [available, borrowed]
+        default: available
+    example:
+      id: 1
+      title: "Cien años de soledad"
+      author: "Gabriel García Márquez"
+      isbn: "978-0307474728"
+      category: "Novela"
+      status: "available"
+
+  Student:
+    type: object
+    properties:
+      id: integer
+      name:
+        type: string
+        required: true

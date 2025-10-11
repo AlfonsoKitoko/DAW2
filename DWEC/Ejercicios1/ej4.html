@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="author" content="Alfonso Martínez Kitoko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cambiar imagen con .src</title>
+</head>
+<body>
+	<img id="cuadrado" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7vnGsgBgV8QW50dp-wZ4GoCNWu4egKYuxAw&s"><br>
+	<button type="button" onclick="cambiaCuadrado()">Cambia el cuadrado</button><br>
+	<img id="animal" src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"><br>
+	<button type="button" onclick="cambiaAnimal()">Cambia el animal</button><br>
+	<img id="bombilla" src="https://media.istockphoto.com/id/502789173/photo/light-bulb-concept.jpg?s=612x612&w=0&k=20&c=vJfSDuFJf_4UsQcUsdMNUfDkkNU6Bf9cTHF-n4-Zwvs="><br>
+	<button type="button" onclick="bombilla()">dale</button>
+	<script>
+		function cambiaCuadrado(){
+			document.getElementById("cuadrado").src = "https://upload.wikimedia.org/wikipedia/commons/c/cf/Square_orange_-_2.svg"
+		}
+		function cambiaAnimal(){
+			document.getElementById("animal").src = "https://upload.wikimedia.org/wikipedia/commons/0/04/Labrador_Retriever_%281210559%29.jpg"
+		}
+		function bombilla(){
+			document.getElementById("bombilla").src = "https://static.scientificamerican.com/sciam/cache/file/2B38DE31-C1D3-4339-8808D61972976EE4_source.jpg?crop=1%3A1%2Csmart&w=1000"
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+#%RAML 1.0
+title: ejemploRAML
+baseUri: https://api.direccion.com/
+version: v1
+/libros:
+description: asfdasdf
+get:
+description: Obtener listado libros con filtros opcionales
+queryParameters:
+categoria?:
+	description: Filtrar por categoria
+	type: string
+	enum:[genero1,genero2,genero3]

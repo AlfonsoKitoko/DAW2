@@ -1,0 +1,34 @@
+.container{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.magenta{
+	height: 400px;
+	width: 400px;
+	background-color: magenta;
+	position: relative;
+}
+.verde{
+	height: 100px;
+	width: 100px;
+	background-color: greenyellow;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+}
+.rojo{
+	height: 40px;
+	width: 40px;
+	background-color: red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -20px;
+	margin-top: -20px;
+}
+/* 400px
+100px
+40px */

@@ -1,0 +1,29 @@
+@startuml DrinkStorage
+
+class Almacen{
+	- int código
+	- ArrayList<Bebida> bebidas
+	+ obtenerTotalBebidas()
+	+ mostrarBebidas()
+}
+class Bebida{
+	- int código
+	- String marca
+	+ float precio
+	+ mostrarPrecio()
+	+ obtenerCodigo()
+}
+class Refresco{
+	- double azúcar
+	- double jarabeFructosa
+}
+class Cerveza{
+	- double grados
+	- String origen
+}
+
+Bebida --o Almacen
+Refresco --|> Bebida
+Cerveza --|> Bebida
+
+@enduml

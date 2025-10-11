@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="author" content="Alfonso Martínez Kitoko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript dentro del propio HTML</title>
+</head>
+<body>
+	<p id="ot">Texto original</p>
+	<button type="button" onclick="cambiaTexto()">
+		Cambiar texto
+	</button>
+	<button type="button" onclick="generaTexto()">Crear texto</button>
+	<script>
+		alert("¡Hola desde JavaScript!")
+		function cambiaTexto(){
+			document.getElementById("ot").innerHTML="Texto cambiado";
+		}
+		let texto='<p id="texto2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa rem reiciendis sapiente, eaque, sed iure dolorum doloribus alias, praesentium quasi molestiae aut voluptates corrupti! Fugit sapiente obcaecati earum. Temporibus, enim?</p>'
+		let boton='<button type="button" onclick="cambiaColor()">Cambiar color</button>'
+		function generaTexto(){
+			document.write(texto+boton);
+		}
+		function cambiaColor(){
+			document.getElementById("texto2").style.color="blue";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+#%RAML 1.0
+title: Clothes Shop API
+baseUri: https://api.tiendaropa.com/
+version: v2
+/products:
+	get:
+		queryParameters:
+			name:
+				displayName: Nombre del producto
+				type: string
+				description: nombre completo del producto
+				example: camiseta
+				required: true
+			description:
+				displayName: Descripción del producto
+				type: string
+				description: descripciṕon completa del producto
+				example: Camiseta con el logo de la empresa
+				required: false
+			price:
+				displayName: Precio
+				type: number
+				description: precio del producto
+				example: 15.00
+				required: true
+			available:
+				displayName: Disponibilidad
+				type: integer
+				description: disponibilidad del producto 
+				example: 200
+				required: true
+			sizes:
+				displayName: Tamaños
+				type: string
+				description: tamaños disponibles para el producto
+				example: XXL
+				required: true
+				enum: 
+					- XXS
+					- XS
+					- S
+					- M
+					- L
+					- XL
+					- XXL
+			colors:
+				displayName: Color 
+				type: string
+				description: Color del producto
+				example: marrón
+				required: false
+			category:
+				displayName: Categoría
+				type: string
+				description: categoría de la que forma parte el producto 
+				enum: 
+					- Hombre
+					- Mujer
+					- Infantil
+				example: Hombre
+				required: true
+    body: {}
+    securedBy: []
+/customers:
+	get:
+		queryParameters:
+			registration:
+				displayName: Registro
+				type: string
+				description:  
+				example: 
+				required: 
+			login:
+				displayName: 
+				type: 
+				description: 
+				example: 
+				required: 
+			profile:
+				displayName: 
+				type: 
+				description: 
+				example: 
+				required: 
+			shipping address:
+				displayName: 
+				type: 
+				description: 
+				example: 
+				required: 
+    body: {}
+    securedBy: []

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="author" content="Alfonso Martínez Kitoko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cambiar estilo con .style</title>
+</head>
+<body>
+	<p id="texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe dolores vel qui! Quaerat deleniti illum sed asperiores placeat quo, nobis esse eius illo, consequuntur expedita a, quasi veritatis molestias quas!</p>
+	
+	<button type="button" onclick="cambiaColor()">cambiar el color</button>
+	<button type="button" onclick="cambiaTam()">cambiar el tamaño</button>
+	<button type="button" onclick="cambiaFondo()">cambiar el fondo</button>
+
+	<script>
+		function cambiaColor(){
+			document.getElementById("texto").style.color = "red"
+		}
+		function cambiaTam(){
+			document.getElementById("texto").style.fontSize = "30px"
+		}
+		function cambiaFondo(){
+			document.getElementById("texto").style.backgroundColor = "yellow"
+		}
+	</script>
+</body>
+</html>

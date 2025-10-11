@@ -1,0 +1,23 @@
+@startuml AMK_docker_architecture
+
+title Esquema de Docker: Alfonso Martínez Kitoko - Hosts, Engine, Images, Containers, Volumes y Registry
+rectangle "Dockerfile: web_app/Dockerfile" as dockerfile
+note right of dockerfile
+	Dockerfile ejemplo:
+	FROM node:18
+	COPY ./app
+	RUN npm install
+	CMD ["node","index.js"]
+end note
+rectangle "Image: web_app:latest" as webapp
+rectangle "Image: worker:latest" as worker
+cloud "Docker Registry (Docker Hub / Private Registry)" {
+	rectangle "Repository: web_app" as repoWebapp
+	rectangle "Repository: worker" as repoWorker
+	rectangle "Repository: postgres" as repoPostgres
+}
+dockerfile -down-> webapp: build
+webapp -down-> repoWebapp: push
+worker -down-> repoWorker: push
+
+@enduml

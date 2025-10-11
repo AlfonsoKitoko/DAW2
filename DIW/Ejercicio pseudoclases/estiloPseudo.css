@@ -1,0 +1,30 @@
+body { margin: auto; }
+img {
+	height: 40px;
+	width: 40px;
+}
+.card {
+	display: inline-block;
+	background-color: #f9f8fd;
+	box-shadow: 5px 10px #ebebea;
+	border: 0px solid black;
+	width: 350px;
+	height: 250px;
+	margin-inline: 35px;
+	margin-block: 25px;
+	padding-inline: 15px;
+}
+p { font-family: 'Courier New', Courier, monospace; }
+.titulo {
+	font-size: 1.8em;
+	font-weight: bold;
+}
+.contenido {
+	font-weight: 100;
+	padding-left: 60px;
+}
+.precio {
+	font-size: 1.2em;
+	font-weight: bolder;
+	padding-left: 150px;
+}

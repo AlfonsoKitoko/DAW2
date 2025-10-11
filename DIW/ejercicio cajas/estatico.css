@@ -1,0 +1,17 @@
+
+body{
+	max-width: 500px;
+}
+div{
+	display:inline-block;
+	width: 100px;
+	height: 100px; 
+	padding: 10px;
+	margin: 10px;
+	background-color: #BD00BC;
+	color: white;
+}
+div:nth-child(5){
+	position: static;
+	background-color: red;
+}

@@ -1,0 +1,60 @@
+#%RAML 1.0
+title: biblioteca
+baseUri: https://api.biblioteca.edu
+version: v1
+/books:
+  get:
+    displayName: books
+    queryParameters:
+      title:
+				displayName: 
+        example: Don Quijote de la Mancha
+        type: string
+				required: true
+      author:
+        displayName: 
+				example: Miguel de Cervantes
+        type: string
+				required: true
+      ISBN:
+        displayName: 
+				example: 9788494081125
+        type: number
+				required: true
+      category:
+        displayName: 
+				example: Adventure
+        type: string
+				required: true
+      status:
+        enum:
+          - available
+          - borrowed
+        example: available
+        type: string
+				required: true
+    body: {}
+    securedBy: []
+/students:
+  get:
+    queryParameters:
+      name:
+        displayName: Nombre del estudiante
+				example: Alfonso
+        type: string
+				required: true
+      ID:
+        displayName: ID del estudiante
+				example: 74558
+        type: number
+				required: true
+      email:
+        displayName: Correo electrónico
+				example: alfonso@correo.es
+        type: string
+				required: true
+      major:
+        displayName: Campo de estudio primario
+				example: Technology
+        type: string
+				required: true

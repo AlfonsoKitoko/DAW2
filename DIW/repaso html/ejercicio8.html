@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Alfonso Martínez Kitoko">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 8</title>
+</head>
+<body>
+	<h1>¿TIENES ALGO PARA DECIR?</h1>
+	<p>A través de deste formulario puedes enviarme un mensaje para ayudarme a corregir errores, a mejorar mi blog, o simplemente para decir hola.</p>
+	<p>Cualquier cosa que tengas para decir es bienvenida, asi que no lo dudes y déjame un mensaje. ¡Estaré feliz de contestarte!</p>
+	<form action="none" method="post">
+		<fieldset>
+			<legend>Mensaje</legend>
+			<label for="nombre">Tu nombre:</label>
+			<input type="text" name="nombre" id="nombre">
+			<label for="correo">Tu dirección de correo:</label>
+			<input type="email" name="correo" id="correo">
+			<label for="mensaje">Tu mensaje:</label>
+			<textarea name="mensaje" id="mensaje"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>Nuevos temas</legend>
+			<label for="temas">¿Qué temas te gustaría que trate más en mi sitio?</label><br>
+			<input type="checkbox" name="html" id="cbHTML">
+			<label for="html">HTML</label>
+			<input type="checkbox" name="graficos" id="cbGraficos">
+			<label for="graficos">Gráficos</label>
+			<input type="checkbox" name="videojuegos" id="cbVideojuegos">
+			<label for="videojuegos">Videojuegos</label>
+			<input type="checkbox" name="arte" id="cbArte">
+			<label for="arte">Arte</label>
+			<input type="checkbox" name="musica" id="cbMusica">
+			<label for="musica">Música</label>
+			<br>
+			<button type="submit">Enviar mensaje</button>
+			<button type="reset">Comenzar de nuevo</button>
+		</fieldset>
+	</form>
+</body>
+</html>

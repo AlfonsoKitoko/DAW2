@@ -1,0 +1,185 @@
+#%RAML 1.0
+title: apiAMK
+baseUri: https://api.amk.com
+version: v1
+mediaType: 
+  - application/json
+  - application/xml
+types:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        required: true
+      name:
+        type: string
+        required: true
+        minLength: 3
+      email:
+        type: string
+        required: true
+        pattern: ^[^\s@]+@[^\s@]+\.[^\s@]+$
+      createdAt:
+        type: datetime
+  Post:
+    type: object
+    properties:
+      id:
+        type: integer
+        required: true
+      title:
+        type: string
+        required: true
+      content:
+        type: string
+        required: true
+      authorId:
+        type: integer
+        required: true
+
+/users:
+  get:
+    description: Listar todos los usuarios
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 1,
+                  "name": "Pepe",
+                  "email": "pepe@correo.es",
+                  "createdAt": "2025-11-12T01:00:12Z"
+                },
+                {
+                  "id": 2,
+                  "name": "Manuel",
+                  "email": "manuel@correo.es",
+                  "createdAt": "2025-01-02T04:02:21Z"
+                }
+              ]
+      500:
+        body:
+          application/json:
+            example: { "error": "Error interno en el servidor" }
+  post:
+    description: Crear un usuario nuevo
+    body:
+      application/json:
+        type: User
+        example:
+          id: 4
+          name: "Carlos"
+          email: "carlos@correo.es"
+          createdAt: "2025-03-04T06:22:12Z"
+    responses:
+      201:
+        body:
+          application/json:
+            example: { "message": "Usuario creado con éxito" }
+      400:
+        body:
+          application/json:
+            example: { "error": "Datos del usuario no válidos" }
+
+/users/{userId}:
+  uriParameters:
+    userId:
+      type: integer
+      required: true
+  get:
+    description: Obtener usuario mediante su Id
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              id: 1
+              name: "Pepe"
+              email: "pepe@correo.es"
+              createdAt: "2025-11-12T01:00:12Z"
+      404:
+        body:
+          application/json:
+            example: { "error": "Usuario no encontrado" }
+  put:
+    description: Actualizar la información del usuario
+    body:
+      application/json:
+        type: User
+        example:
+          id: 1
+          name: "Pepe actualizado"
+          email: "pepe.actualizado@correo.es"
+          createdAt: "2025-11-12T01:00:12Z"
+    responses:
+      200:
+        body:
+          application/json:
+            example: { "message": "Usuario actualizado con éxito" }
+      400:
+        body:
+          application/json:
+            example: { "error": "datos de actualización inválidos" }
+      404:
+        body:
+          application/json:
+            example: { "error": "Usuario no encontrado" }
+  delete:
+    description: Delete a user
+    responses:
+      200:
+        body:
+          application/json:
+            example: { "message": "Usuario eliminado con éxito" }
+      404:
+        body:
+          application/json:
+            example: { "error": "Usuario no encontrado" }
+/posts:
+  get:
+    description: Listar todas las publicaciones
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 1,
+                  "title": "Mi primer post",
+                  "content": "Contenido de ejemplo",
+                  "authorId": 1
+                },
+                {
+                  "id": 2,
+                  "title": "Segundo post",
+                  "content": "Otro contenido",
+                  "authorId": 2
+                }
+              ]
+      500:
+        body:
+          application/json:
+            example: { "error": "Error interno en el servidor" }
+  post:
+    description: Crear una publicación
+    body:
+      application/json:
+        type: Post
+        example:
+          id: 3
+          title: "Nuevo Post"
+          content: "Texto del nuevo post"
+          authorId: 1
+    responses:
+      201:
+        body:
+          application/json:
+            example: { "message": "Publicación creada con éxito" }
+      400:
+        body:
+          application/json:
+            example: { "error": "Datos de la publicación no válidos" }

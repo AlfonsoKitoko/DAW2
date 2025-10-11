@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="author" content="Alfonso Martínez Kitoko">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cambiar contenido (innerHTML)</title>
+</head>
+<body>
+	<p id="saludo">Hola</p>
+	<button type="button" onclick="cambiaSaludo()">Cambia el saludo</button>
+	<p id="click"></p>
+	<button type="button" onclick="hazClick()">Púlsame</button>
+	<p id="fruta">Naranja</p>
+	<button type="button" onclick="cambiaFruta()">Cambia la fruta</button>
+	<script>
+		function cambiaSaludo() {
+			document.getElementById("saludo").innerHTML = "Bienvenido"
+		}
+		function hazClick() {
+			document.getElementById("click").innerHTML = "¡Has hecho click!"
+		}
+		function cambiaFruta(){
+			document.getElementById("fruta").innerHTML = "Manzana"
+		}
+	</script>
+</body>
+</html>

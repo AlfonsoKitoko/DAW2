@@ -1,0 +1,19 @@
+@startuml
+
+actor Usuario
+participant Frontend
+participant ServicioPedidos
+participant ServicioPagos
+participant ServicioInventario
+Usuario -> Frontend: agregarProducto(carrito)
+Frontend -> ServicioPedidos: verificarDisponibilidad()
+ServicioPedidos -> ServicioInventario: consultarStock(producto)
+ServicioInventario --> ServicioPedidos: stockDisponible
+ServicioPedidos --> Frontend: confirmación
+Usuario -> Frontend: realizarPedido()
+Frontend -> ServicioPagos: procesarPago()
+ServicioPagos --> Frontend: pagoExitoso
+Frontend -> ServicioPagos: confirmarPedido()
+ServicioPedidos -> ServicioInventario: actualizarStock()
+
+@enduml

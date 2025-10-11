@@ -1,0 +1,10 @@
+Ubunturvidor
+nombre servidor: kitorvidor
+nombre usuario: amkser
+contraseña: amkserver
+
+------------------
+
+Mentolado
+nombre usuario: kitoko
+contraseña: kitoko

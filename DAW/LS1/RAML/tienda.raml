@@ -1,0 +1,101 @@
+#%RAML 1.0
+title: Tienda Ropa API
+version: v2
+baseUri: https://api.tiendaropa.com/v2
+mediaType: application/json
+
+types:
+  Product:
+    type: object
+    properties:
+      id: integer
+      name:
+        type: string
+        required: true
+      description: string
+      price:
+        type: number
+        format: float
+        required: true
+      sizes:
+        type: array
+        items: string
+        example: ["S", "M", "L", "XL"]
+      colors:
+        type: array
+        items: string
+        example: ["Rojo", "Azul", "Negro"]
+      category:
+        type: string
+        enum: [men, women, children]
+    example:
+      id: 101
+      name: "Camiseta básica"
+      description: "Camiseta de algodón 100%"
+      price: 19.99
+      sizes: ["S", "M", "L"]
+      colors: ["Blanco", "Negro"]
+      category: "men"
+
+  Customer:
+    type: object
+    properties:
+      id: integer
+      name: string
+      email:
+        type: string
+        pattern: ^[^\s@]+@[^\s@]+\.[^\s@]+$
+      password: string
+      shippingAddress?: string
+    example:
+      id: 1
+      name: "Ana Pérez"
+      email: "ana.perez@example.com"
+      password: "hashedpassword"
+      shippingAddress: "Calle Mayor 123, Madrid, España"
+
+/products:
+  get:
+    description: List all products
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 101,
+                  "name": "Camiseta básica",
+                  "description": "Camiseta de algodón 100%",
+                  "price": 19.99,
+                  "sizes": ["S", "M", "L"],
+                  "colors": ["Blanco", "Negro"],
+                  "category": "men"
+                },
+                {
+                  "id": 102,
+                  "name": "Vestido floral",
+                  "description": "Vestido ligero para verano",
+                  "price": 39.99,
+                  "sizes": ["M", "L"],
+                  "colors": ["Rojo", "Verde"],
+                  "category": "women"
+                }
+              ]
+  post:
+    description: Add a new product
+    body:
+      application/json:
+        type: Product
+    responses:
+      201:
+        body:
+          application/json:
+            example: { "message": "Product created successfully" }
+
+/products/{productId}:
+  uriParameters:
+    productId: integer
+  get:
+    description: Get product details
+    response

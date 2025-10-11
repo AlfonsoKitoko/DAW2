@@ -1,0 +1,12 @@
+.centrado{
+	text-align: center;
+	border: 3px dotted black;
+}
+div{
+	width: 75%;
+	margin:20px auto;
+	.centrado{
+		text-align: start;
+		border-color: red;
+	}
+}

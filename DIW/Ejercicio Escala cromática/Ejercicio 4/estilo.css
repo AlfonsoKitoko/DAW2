@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Noto+Sans+Telugu:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap');
+
+.color1 {
+	color: #045e67;
+}
+.color2 {
+	color: #3d3d3f;
+}
+p#texto1 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+p#texto2 {
+  font-family: "Solway", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+p#texto3 {
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+p#texto4 {
+  font-family: "Noto Sans Telugu", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}

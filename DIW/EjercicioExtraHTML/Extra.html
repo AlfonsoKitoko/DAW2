@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Alfonso Martínez Kitoko">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio HTML Extra</title>
+</head>
+<body>
+	<header>
+		<h1>Ejercicio de HTML</h1>
+	</header>
+	<nav>
+		<ul id="inicio">
+			<li><a href="#parrafo">Párrafo con etiquetas inline</a></li>
+			<li><a href="#media">Imagen y vídeo</a></li>
+			<li><a href="#tabla">Tabla</a></li>
+			<li><a href="#formulario">Formulario</a></li>
+		</ul>
+		<p>También puedes visitar un recurso externo: <a href="https://developer.mozilla.org/es/docs/Web">Documentación de HTML en MDN</a></p>
+	</nav>
+	<main>
+		<section id="parrafo">
+			<h2>Encabezados de ejemplo</h2>
+			<h3>Encabezado H3</h3>
+			<h4>Encabezado H4</h4>
+			<p>Estos encabezados ayudan a estructurar el documentao y la navegación.</p>
+			<h2>Párrafo con etiquetas inline</h2>
+			<p>Este es un <b>párrafo</b> de ejemplo que usa varias <i>etiquetas inline</i>: texto en <i>cursiva</i>, texto <u>subrayado</u>, un <mark>resaltado</mark> puntual, una nota <small>en letra pequeña</small>, una fórmula H<sub>2</sub>O con un subíndice y x<sup>2</sup> con superíndice, e incluso un fragmento de <code style="background-color: darkgray;">código_inline()</code>.</p>
+
+			<p><a href="#inicio">Volver arriba</a></p>
+		</section>
+		
+		<section id="media">
+			<h2>Multimedia (imagen y vídeo)</h2>
+			<h3>Imagen</h3>
+			<figure>
+				<img src="https://miro.medium.com/v2/resize:fit:508/1*hKRcRgikQ2l2E1jlFtMkZA.jpeg" alt="Meme de HTML">
+				<figcaption>Meme de HTML</figcaption>
+			</figure>
+			<h3>Vídeo</h3>
+			<iframe 
+				width="560" height="315" 
+				src="https://www.youtube.com/embed/EvKm8yhM7V8?si=X1IC6kmqTIGVh8F7" 
+				title="YouTube video player" 
+				frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+				referrerpolicy="strict-origin-when-cross-origin" 
+				allowfullscreen>
+			</iframe>
+
+			<p><a href="#inicio">Volver arriba</a></p>
+		</section>
+		
+		<section id="tabla">
+			<h2>Tabla de ejemplo</h2>
+			<table>
+				<tr>
+					<td style="text-align: center;" colspan="3">Listado de módulos (demo)</td></tr>
+				<tr style="text-align: center;">
+					<td><b>Código</b></td>
+					<td><b>Módulo</b></td>
+					<td><b>Horas</b></td>
+				</tr>
+				<tr>
+					<td>SMR-01</td>
+					<td>Montaje y mantenimiento</td>
+					<td>224</td>
+				</tr>
+				<tr>
+					<td>DAW-02</td>
+					<td>Desarrollo web en entorno cliente</td>
+					<td>224</td>
+				</tr>
+				<tr>
+					<td>DAM-03</td>
+					<td>Programación</td>
+					<td>256</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;" colspan="2"><b>Total de horas</b></td>
+					<td>704</td>
+				</tr>
+			</table>
+
+			<p><a href="#inicio">Volver arriba</a></p>
+		</section>
+
+		<section id="formulario">
+			<h2>Formulario de ejemplo</h2>
+			<form action="">
+
+				<fieldset>
+					<legend>Datos técnicos</legend>
+					<p>
+						<label for="nombre">Nombre:</label>
+						<input type="text" name="nombre" id="name" placeholder="Tu nombre">
+					</p>
+					<p>
+						<label for="correo">Correo electrónico:</label>
+						<input type="email" name="correo" id="mail" placeholder="tucorreo@ejemplo.com">
+					</p>
+					<p>
+						<label for="contra">Contraseña:</label>
+						<input type="password" name="contra" id="pswd">
+					</p>
+					<p>
+						<label for="fecnac">Fecha de nacimiento:</label>
+						<input type="date" name="fecnac" id="birth">
+					</p>
+					<p>
+						<label for="edad">Edad:</label>
+						<input type="number" name="edad" id="age">
+					</p>
+					<p>
+						<label for="archivo">Sube un archivo:</label>
+						<input type="file" name="archivo" id="file">
+					</p>
+				</fieldset>
+				<fieldset>
+					<legend>Preferencias</legend>
+					<p>
+						<p>Turno preferido:</p>
+						<input type="radio" name="turno" id="morning" value="am"><label for="turno">Mañana</label><br>
+						<input type="radio" name="turno" id="afternoon" value="pm"><label for="turno">Tarde</label>
+					</p>
+					<p>
+						<input type="checkbox" name="noticias" id="newsletter"><label>Quiero r	ecibir novedades por correo</label>
+					</p>
+					<p>
+						<label>Ciclo formativo:</label>
+						<select name="ciclo" id="fp">
+							<option value="fp_dam"><label for="ciclo">DAM</label></option>
+							<option value="fp_daw"><label for="ciclo">DAW</label></option>
+						</select>
+					</p>
+					<label for="comentarios">Comentarios:</label><br>
+					<textarea name="comentarios" id="comment" placeholder="Escribe aquí..."></textarea>
+				</fieldset>
+			</form>
+			<button type="submit">Enviar</button>
+			<button type="reset">Reset</button>
+			
+			<p><a href="#inicio">Volver arriba</a></p>
+		</section>
+	
+	</main>
+	
+	<footer>
+		<p>2025 DIW - Ejercicio HTML Extra</p>
+	</footer>
+</body>
+</html>
