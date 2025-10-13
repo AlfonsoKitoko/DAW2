@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "path": "^0.12.7"
+  },
+  "name": "act_films_alfonso_martinez_kitoko",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
