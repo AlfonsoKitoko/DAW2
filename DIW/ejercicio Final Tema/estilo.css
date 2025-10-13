@@ -1,0 +1,41 @@
+header{
+	background-color: #eeeeee;
+	color: #42454a;
+	font-family: 'Courier New', Courier, monospace;
+}
+nav {
+	margin: auto;
+	padding: auto;
+	background-color: #113488;
+}
+nav ul{
+	list-style: none;
+}
+nav li, nav li ul{
+	display: inline-block;
+	width: 160px;
+	position: relative;
+}
+nav li a{
+	text-decoration: none;
+	padding: 10px;
+	color: white;
+}
+nav li a:hover, nav li ul a:hover{
+	background-color: #226eb7;
+}
+nav li ul li{
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+nav li:hover > ul li{
+	float: left;
+	display: block;
+}
+input[type=button]{
+	background-color: #1c54e4;
+	border: none;
+	/* color del texto blanco para mayor legibilidad */
+	color: white;
+}
