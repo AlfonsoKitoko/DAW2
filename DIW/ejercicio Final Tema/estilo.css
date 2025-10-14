@@ -1,3 +1,6 @@
+body {
+	background-color: white;
+}
 header{
 	background-color: #eeeeee;
 	color: #42454a;
@@ -33,9 +36,35 @@ nav li:hover > ul li{
 	float: left;
 	display: block;
 }
-input[type=button]{
-	background-color: #1c54e4;
-	border: none;
-	/* color del texto blanco para mayor legibilidad */
+main{
+	& form{
+		float: left;
+		width: 30%;
+		& input[type=submit]{
+			background-color: #1c54e4;
+			border: black;
+			/* color del texto blanco para mayor legibilidad */
+			color: white;
+		}
+	}
+}
+aside{
+	float:left;
+	width: 70%;
+	& h2{
+		color: #1c54e4;
+	}
+	& p::first-line{
+		margin-block: 15px;
+	}
+	& p:nth-child(even)::before{
+			content: "«";
+		}
+	& p:nth-child(even)::after{
+		content: "»";
+	}
+}
+footer{
+	background-color: #113488;
 	color: white;
 }
