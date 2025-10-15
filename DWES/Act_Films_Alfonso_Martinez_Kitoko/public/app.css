@@ -1,0 +1,39 @@
+ul{
+	list-style: none;
+}
+#plot{
+	color: rgb(129, 138, 138);
+	font-style: italic;
+}
+body>img{
+	display: block;
+	margin: auto;
+	max-width: 500px;
+}
+form{
+	display: block;
+	margin: auto;
+}
+input[type=text]{
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	background-image: url('lupa.png');
+	background-position: 5px 50%;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	padding-inline-start: 30px ;
+	padding-block: 5px;
+	min-width: 400px;
+}
+button[type=submit]{
+	border-radius: 5px;
+	border: 2px solid transparent;
+	background-color: #f8f9fa;
+	padding: 5px;
+	color: #424649;
+
+	&:hover{
+	border: 2px solid #bbbbbb;
+	}
+}

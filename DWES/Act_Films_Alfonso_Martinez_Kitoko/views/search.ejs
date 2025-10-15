@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Alfonso Martínez Kitoko" />
-    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="app.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%=film.Title%></title>
+    <title>Resultados para '<%=q %>'</title>
   </head>
+
   <body>
-    <h1><%= film.Title %></h1>
-    <p><%= film.Plot %></p>
-    <p><%= film.Year %></p>
-    <% film.Images.forEach(i => { %>
-    <img src="<%i%>" alt="imagen" />
-    <% }); %>
+    <h1>Resultados para '<%=q %>'</h1>
+    <ul>
+      <%film.forEach(f => { %>
+      <li>
+        <h2><i><%=f.Title %> (<%=f.Year %>)</i></h2>
+        <img src="<%=film.Poster %>" alt="poster" />
+        <p id="plot"><%=f.Plot %></p>
+        <%f.Images.forEach(i=> { %>
+        <img src="<%=i %>" alt="imagen" width="400px" />
+        <%}); %>
+      </li>
+      <%}) %>
+    </ul>
   </body>
 </html>

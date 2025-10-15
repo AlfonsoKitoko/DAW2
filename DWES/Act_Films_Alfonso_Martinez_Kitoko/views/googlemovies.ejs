@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Alfonso Martínez Kitoko" />
-    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="app.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GOOGLEMOVIES</title>
   </head>
+
   <body>
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1024px-Google_2015_logo.svg.png"
-      width="500px"
       alt="google"
     />
     <form method="get" action="/search">
-      <input type="text" name="q" placeholder="¿Qué película quieres buscar?" />
+      <input
+        type="text"
+        name="q"
+        autofocus="yes"
+        placeholder="¿Qué película quieres buscar?"
+      />
       <button type="submit">Buscar con Google</button>
     </form>
   </body>

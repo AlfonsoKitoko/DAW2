@@ -1,7 +1,7 @@
 const films = require("./films.json")
 const express = require("express")
 const app = express()
-const port = 3000
+const port = 5202	//Puerto para la conexión
 const path = require("path")
 app.set("view_engine","ejs")
 app.set("views",path.join(__dirname,"views"))
@@ -16,13 +16,14 @@ app.get("/",(req,res)=>{
 // search.ejs
 app.get("/search",(req,res)=>{
 	const { q } = req.query
-	const film = films[q]
-	if(film) 
-		res.render("search.ejs",{film})
+	const film = Object.values(films).filter(f => 
+		f.Title.toLowerCase().includes(q.toLowerCase())
+	)
+	if(film.length>0) return res.render("search.ejs",{film, q})
 })
 
 // default
-app.get(/.*/,(req,res)=>{
+app.use(/.*/,(req,res)=>{
 	const { busqueda } = req.params
 	res.send(`<h1>PELÍCULA '${busqueda}' NO ENCONTRADA</h1>`)})
 //-----------------
