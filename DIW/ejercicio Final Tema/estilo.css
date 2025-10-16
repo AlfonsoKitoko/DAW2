@@ -1,70 +1,107 @@
 body {
 	background-color: white;
+	margin: 0;
+	padding: 0;
 }
 header{
+	overflow: hidden;
 	background-color: #eeeeee;
 	color: #42454a;
-	font-family: 'Courier New', Courier, monospace;
+	/**/font-family: 'Courier New', Courier, monospace;
 }
-nav {
-	margin: auto;
-	padding: auto;
-	background-color: #113488;
+#navmenu{
+  background-color: #1f5b98;
+	width: 100%;
 }
-nav ul{
-	list-style: none;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+	width: 100%;
 }
-nav li, nav li ul{
-	display: inline-block;
-	width: 160px;
-	position: relative;
+ul li {
+  min-width: 140px;
+  background-color: #1f5b98;
+  float: left;
+  position: relative;
 }
-nav li a{
-	text-decoration: none;
-	padding: 10px;
-	color: white;
+ul li a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
 }
-nav li a:hover, nav li ul a:hover{
-	background-color: #226eb7;
+ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 140px;
+  background-color: #1f5b98;
+  padding: 0;
 }
-nav li ul li{
-	display: none;
-	position: absolute;
-	min-width: 140px;
+ul li:hover > ul {
+  display: block;
 }
-nav li:hover > ul li{
-	float: left;
-	display: block;
+ul li ul li {
+  float: none;
+  padding: 0;
+}
+ul li ul li a:hover {
+  background-color: #226eb7;
+}
+a:hover {
+  background-color: #226eb7;
 }
 main{
-	& form{
-		float: left;
-		width: 30%;
-		& input[type=submit]{
-			background-color: #1c54e4;
-			border: black;
-			/* color del texto blanco para mayor legibilidad */
-			color: white;
-		}
+	display: inline-block;
+}
+#login{
+	float: left;
+	width: 30%;
+	display: block;
+}
+input{
+	width: 95%;
+	margin: 2.5px;
+}
+input:focus{
+	outline: 2px solid black;
+}
+input[type=submit]{
+	background-color: #1f5b98;
+	/* color del texto blanco para mayor legibilidad */
+	color: white;
+	border-radius: 5px;
+	border: 2px solid transparent;
+	&:hover{
+		background-color: #226eb7;
 	}
 }
-aside{
-	float:left;
+#texto{
+	float: left;
 	width: 70%;
-	& h2{
-		color: #1c54e4;
+	& h3{
+		color: #1f5b98;
 	}
 	& p::first-line{
 		margin-block: 15px;
 	}
-	& p:nth-child(even)::before{
+	& .quote::before{
 			content: "«";
 		}
-	& p:nth-child(even)::after{
+	& .quote::after{
 		content: "»";
 	}
 }
-footer{
+footer{/**/
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
 	background-color: #113488;
 	color: white;
+}
+*::selection{
+	background-color: rgb(225, 220, 255);
 }
