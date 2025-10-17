@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de comentarios</title>
+  </head>
+  <body>
+    <h1>Listado de comentarios</h1>
+		<a href="/comentarios/new">Nuevo comentario</a>
+    <div>
+      <%for(let c of comentarios){ %>
+				<a href="/comentarios/<%=c.id %>">Detalles</a>
+      <ul><li><p><b><%=c.usuario%></b></p>
+				<ul><li>
+					<p><%=c.opinion %></p>
+					</li></ul>
+				</li></ul>
+      <%} %>
+    </ul>
+  </body>
+</html>
